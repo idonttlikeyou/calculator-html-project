@@ -161,3 +161,12 @@ function hitung_keliling_dan_luas_lingkaran() {
   document.getElementById("menggunakan_pi").textContent = PI;
   }
 }
+
+//kalkulator hipotenusa//
+
+function hitung_hipotenusa() {
+  let sisi_samping = document.getElementById("panjang_sisi_samping_segitiga").value;
+  let sisi_bawah = document.getElementById("panjang_sisi_bawah_segitiga").value;
+  let hipotenusa = Math.sqrt(sisi_samping ** 2 + sisi_bawah ** 2)
+  document.getElementById("hasil_hipotenusa").textContent = hipotenusa + " cm"
+}
