@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>Kalkulator Penghitung Dosa Koruptor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
   </head>
   
   <body>
+    <div class="header_and_credit">
     <h2>Website Penghitung</h2>
     <h3>Selamat datang di website Penghitung!</h3>
     <p style="color: black;">Made By: Aldrich.a.w</p>
@@ -14,11 +18,12 @@
         <li><a href="#Kalkulator_Basic">Kalkulator Dasar</a></li>
         <li><a href="#Kalkulator_Suhu">Kalkulator Suhu</a></li>
         <li><a href="#Kalkulator_jawa">Kalkulator Hari Jawa</a></li>
-        </li>
+        <li><a href="#kalkulator_lingkaran">kalkulator lingkaran</a></li>
       </ul>
     </nav>
+    </div>
     <!--Kalkulator Dasar-->
-          <div style="background-color: #cfff00; padding: 10px; margin: 10px; border: 3px solid black;">
+          <div class="kalkulator_basic">
       <h2 id="Kalkulator_Basic">Kalkulator Basic</h2>
       <p>Input Angka:</p>
       <p>X:<input type="number" id="angka_x" placeholder="Masukkan Angka X"></p>
@@ -32,61 +37,10 @@
       <p><button onclick="kurangi_x_y()">Kurangi X Dengan Y</button></p>
       <p><button onclick="kalikan_x_y()">Kalikan X Dan Y</button></p>
       <p><button onclick="bagi_x_y()">Bagi X Dengan Y</button></p>
-      <p>Hasil: <span id="hasil"></span></p>
-      <!--JAVASCRIPT! BAGUS! Aku g suka javascript :(-->
-      <script>
-        function kuadratkan_x() {
-          let x=
-          document.getElementById("angka_x").value;
-          document.getElementById("hasil").textContent = x * x;
-        }
-        function kuadratkan_y() {
-          let y=
-          document.getElementById("angka_y").value;
-          document.getElementById("hasil").textContent = y * y;
-        }
-        function akarkan_x() {
-          let x=
-          Number(document.getElementById("angka_x").value);
-          document.getElementById("hasil").textContent = Math.sqrt(x);
-        }
-        function akarkan_y() {
-          let y=
-          document.getElementById("angka_y").value;
-          document.getElementById("hasil").textContent = Math.sqrt(y);
-        }
-        function tambahkan_x_y() {
-          let x=
-          Number(document.getElementById("angka_x").value);
-          let y=
-          Number(document.getElementById("angka_y").value);
-          document.getElementById("hasil").textContent = x + y;
-        }
-        function kurangi_x_y() {
-          let x=
-          Number(document.getElementById("angka_x").value);
-          let y=
-          Number(document.getElementById("angka_y").value);
-          document.getElementById("hasil").textContent = x - y;
-        }
-        function kalikan_x_y() {
-          let x=
-          Number(document.getElementById("angka_x").value);
-          let y=
-          Number(document.getElementById("angka_y").value);
-          document.getElementById("hasil").textContent = x * y;
-        }
-        function bagi_x_y() {
-          let x=
-          Number(document.getElementById("angka_x").value);
-          let y=
-          Number(document.getElementById("angka_y").value);
-          document.getElementById("hasil").textContent = x / y;
-        }
-      </script>
+      <p class="hasil">Hasil: <span id="hasil"></span></p>
       </div>
-      <!--Kalkulator advanced-->
-      <div style="background-color: #ffBB00; padding: 10px; border: solid 3px;">
+      <!--Kalkulator suhu-->
+      <div class="kalkulator_suhu">
         <h3 id="Kalkulator_Suhu">Kalkulator Suhu</h3>
         <p>Silahkan Input Suhu:</p>
         <input type="number" placeholder="Masukkan Suhu" name="inputsuhu">
@@ -105,87 +59,27 @@
         <p><button onclick="ubahkefahrenheit()">Ubah Ke Fahrenheit</button></p>
         <p><button onclick="ubahkekelvin()">Ubah Ke Kelvin</button></p>
         <p><button onclick="ubahkereamur()">Ubah Ke Reamur</button></p>
-        <script>
-          function ubahkecelsiussementara() {
-            let inputsuhu=
-            Number(document.querySelector('input[name="inputsuhu"]').value);
-            let celsiussementara;
-            if 
-            (document.getElementById("celsius").checked) { celsiussementara = inputsuhu }
-            else if
-            (document.getElementById("fahrenheit").checked) { celsiussementara = ((inputsuhu - 32) *5/9) }
-            else if
-            (document.getElementById("kelvin").checked) { celsiussementara = inputsuhu - 273 }
-            else if
-            (document.getElementById("reamur").checked) { celsiussementara = inputsuhu * 5/4 }
-            else {
-              return "Silahkan Dipilih Terlebih Dahulu!";
-            }
-            return celsiussementara;
-          }
-          function ubahkecelsius() {
-            let c = ubahkecelsiussementara();
-            if (typeof c === "string") {
-              document.getElementById("hasilkalksuhu").textContent = c;
-              
-            } else {
-              document.getElementById("hasilkalksuhu").textContent = (c * 1).toFixed(2) + " °C";
-  }
-}
-function ubahkefahrenheit() {
-  let c = ubahkecelsiussementara();
-  if (typeof c === "string") {
-    document.getElementById("hasilkalksuhu").textContent = c;
-  } else {
-    document.getElementById("hasilkalksuhu").textContent = (c * 9/5 + 32).toFixed(2) + " °F";
-  }
-}
-function ubahkekelvin() {
-  let c = ubahkecelsiussementara();
-  if (typeof c === "string") {
-    document.getElementById("hasilkalksuhu").textContent = c;
-  } else {
-    document.getElementById("hasilkalksuhu").textContent = (c + 273).toFixed(2) + " °K";
-  }
-}
-function ubahkereamur() {
-  let c = ubahkecelsiussementara();
-  if (typeof c === "string") {
-    document.getElementById("hasilkalksuhu").textContent = c;
-  } else {
-    document.getElementById("hasilkalksuhu").textContent = (c * 4/5).toFixed(2) + " °R";
-  }
-}
-  </script>
-  <div style="background-color: #ffffff; border: dashed black;">
+  <div class="hasilkalksuhu">
         <p>Hasil: <span id="hasilkalksuhu"></span></p>
         </div>
         </div>
         </div>
-        <div style="background-color: lightblue; border: 3px solid black; margin-top: 5px; padding; 10px">
+        <div class="kalkulator_jawa">
           <h3 id="Kalkulator_jawa">Kalkulator Penghitung Hari Jawa</h3>
-          <p>Masukkan Tanggal</p>
+          <label>Masukkan Tanggal</label>
           <input type="text" placeholder="20/06/2025" id="inputtanggal">
-          <button onclick="konversitanggalkeharijawa()" style="border: solid black 1px;">Konversi!</button>
-          <p>Hasil: <span id="hasilharijawa"></span></p>
-          <script>
-            function ubahkehari(str) {
-            let [h, b, t] =
-            str.split("/").map(Number);
-            return new Date(t, b - 1, h);
-            }
-            
-            function konversitanggalkeharijawa() {
-             let inputtanggal =
-             ubahkehari(document.getElementById("inputtanggal").value);
-             
-             let konversiMd = Math.abs(inputtanggal.getTime());
-             let patokan = new Date(1938, 1, 1).getTime();
-             let konversiD = Math.floor((konversiMd - patokan) / (1000 * 60 * 60 * 24));
-             let hariPasaran = ["Pahing", "Pon", "Wage", "Kliwon", "Legi"];
-             let indexPasaran = ((konversiD % 5) + 5 ) % 5;
-             document.getElementById("hasilharijawa").textContent = hariPasaran[indexPasaran]
-            }
-          </script>
+          <button onclick="konversitanggalkeharijawa();">Konversi!</button>
+          <p class="hasilharijawa">Hasil: <span id="hasilharijawa"></span></p>
+        </div>
+        <div class="kalkulator_lingkaran">
+          <h3 id="kalkulator_lingkaran">Kalkulator Penghitung Luas dan keliling lingkaran!
+          </h3>
+          <label>Masukkan Jari-jari lingkaran:</label>
+          <input type="number" placeholder="7" id="jari_jari">
+          <label>cm</label><br>
+          <button onclick="hitung_keliling_dan_luas_lingkaran()">Hitung!</button><br>
+          <p class="hasil_hitung_lingkaran">Keliling: <span id="keliling_lingkaran"></span><br>
+          Luas: <span id="luas_lingkaran"></span></p>
+          <p>Menggunakan π= <span id="menggunakan_pi"></span></p>
         </div>
   </body>
