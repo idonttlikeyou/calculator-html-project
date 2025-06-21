@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Kalkulator Penghitung Dosa Koruptor</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
     <script src="script.js" defer></script>
   </head>
   
@@ -19,6 +20,7 @@
         <li><a href="#Kalkulator_Suhu">Kalkulator Suhu</a></li>
         <li><a href="#Kalkulator_jawa">Kalkulator Hari Jawa</a></li>
         <li><a href="#kalkulator_lingkaran">kalkulator lingkaran</a></li>
+        <li><a href="#kalkulator_hipotenusa">Kalkukator Hipotenusa</a></li>
       </ul>
     </nav>
     </div>
@@ -81,5 +83,13 @@
           <p class="hasil_hitung_lingkaran">Keliling: <span id="keliling_lingkaran"></span><br>
           Luas: <span id="luas_lingkaran"></span></p>
           <p>Menggunakan π= <span id="menggunakan_pi"></span></p>
+        </div>
+        <div class="kalkulator_hipotenusa">
+          <h3 id="kalkulator_hipotenusa">Kalkulator Hipotenusa</h3>
+          <label>Masukkan panjang sisi bawah dan samping:</label><br><br>
+          <input type="number" id="panjang_sisi_samping_segitiga" placeholder="Sisi Samping"><label> cm</label><br>
+          <input type="number" id="panjang_sisi_bawah_segitiga" placeholder="Sisi Bawah"><label> cm</label>
+          <button onclick="hitung_hipotenusa()">Hitung!</button>
+          <p class="hasil_hipotenusa">Hasil: <span id="hasil_hipotenusa"></span></p>
         </div>
   </body>
