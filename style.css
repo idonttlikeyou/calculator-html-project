@@ -1,0 +1,113 @@
+body {
+  background: linear-gradient(to top left, #ffffff, #000000);
+  color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header_and_credit {
+  background: linear-gradient(to bottom right, #ffffff, #aaaaaa);
+  padding: 10px;
+  border: solid black 2px;
+  border-radius: 5px;
+}
+
+h1, h2, h3 {
+  color: #000000;
+  text-align: center;
+}
+
+button {
+  background: linear-gradient(to left, #ff5500, #ffaa00);
+  border: solid black 2px;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #00ff58, #00ffff);
+}
+
+input[type="number"],
+input[type="text"] {
+  padding: 8px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+/*Ini utk hasil*/
+#hasilkalksuhu, #hasilharijawa {
+  font-size: 1.0em;
+  font-weight: bold;
+  color: #000000;
+}
+
+.hasil {
+  background-color: #ffeeaa;
+  border: dashed black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.hasilkalksuhu {
+  background: linear-gradient(to left, #dd00cc, #00eeff);
+  border: dashed black;
+}
+
+.hasilharijawa {
+  background: linear-gradient(to right,  #ffaa00, #dd00cc);
+  border: dashed black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.hasil_hitung_lingkaran {
+  background: linear-gradient(to top right, #00ffaa, #00ffff);
+  border: dashed, black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* style untuk kalkulator dimulai disini! */
+.kalkulator_basic {
+  background: linear-gradient(to bottom, #00ff22, #ffaa00);
+  padding: 10px;
+  margin-top: 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.kalkulator_suhu {
+  background: linear-gradient(to bottom, #ffBB00, #6600ff);
+  padding: 10px;
+  border: solid 3px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.kalkulator_jawa {
+  background: linear-gradient(to bottom, #6600ff, #00fff0);
+  border: 3px solid black;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.kalkulator_lingkaran {
+  background: linear-gradient(to bottom, #00fff0, #ff44ff);
+  border: 3px solid black;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
