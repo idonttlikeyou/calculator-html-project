@@ -79,6 +79,13 @@ input[type="text"] {
   border-radius: 5px;
 }
 
+.hasil_hipotenusa {
+  background: linear-gradient(to top left, #ff00ff, #00ffff);
+  border: solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 /* style untuk kalkulator dimulai disini! */
 .kalkulator_basic {
   background: linear-gradient(to bottom, #00ff22, #ffaa00);
@@ -106,6 +113,14 @@ input[type="text"] {
 
 .kalkulator_lingkaran {
   background: linear-gradient(to bottom, #00fff0, #ff44ff);
+  border: 3px solid black;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.kalkulator_hipotenusa {
+  background: linear-gradient(to bottom, #ff44ff, #ffff00);
   border: 3px solid black;
   margin-top: 5px;
   padding: 10px;
